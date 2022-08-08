@@ -5,6 +5,9 @@ import preprocess from 'svelte-preprocess';
 const config = {
 	preprocess: preprocess(),
 	kit: {
+		alias: {
+			$lib: 'src/lib/'
+		},
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs',
