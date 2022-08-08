@@ -13,6 +13,7 @@ const config = {
 		paths: {
 			base: dev ? '' : '/dangelomedinag.github.io'
 		},
+		appDir: 'internal',
 		prerender: {
 			crawl: true,
 			default: true,
