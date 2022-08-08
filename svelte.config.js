@@ -12,15 +12,14 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: dev ? '' : '/dangelomedinag.github.io/magacine'
+			base: dev ? '' : '/dangelomedinag.github.io'
 		},
 		prerender: {
 			crawl: true,
 			default: true,
 			onError: 'continue',
 			enabled: true
-		},
-		appDir: 'internal'
+		}
 	}
 };
 
