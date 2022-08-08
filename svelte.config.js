@@ -12,7 +12,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: dev ? '' : '/magacine'
+			base: dev ? '' : '/dangelomedinag.github.io/magacine'
 		},
 		prerender: {
 			crawl: true,
