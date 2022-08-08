@@ -8,14 +8,16 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			fallback: '404.html'
+		}),
 		paths: {
 			base: dev ? '' : '/magacine'
 		},
 		prerender: {
 			crawl: true,
 			default: true,
-			onError: 'fail',
+			onError: 'continue',
 			enabled: true
 		},
 		appDir: 'internal'
