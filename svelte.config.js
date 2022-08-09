@@ -6,14 +6,13 @@ const config = {
 	preprocess: preprocess(),
 	kit: {
 		alias: {
-			$lib: 'src/lib/'
+			$lib: 'src/lib/*'
 		},
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs',
 			fallback: '404.html'
 		}),
-		appDir: 'internal',
 		prerender: {
 			crawl: true,
 			default: true,
