@@ -2,6 +2,7 @@
 	--color-bg: #242424;
 	--color-front: rgba(255, 255, 255, 0.87);
 	--color-bg-opacity: rgba(255 255 255 / 7%);
+	--color-primary: #646cff;
 
 	font-family: 'Merriweather', serif;
 	font-size: 16px;

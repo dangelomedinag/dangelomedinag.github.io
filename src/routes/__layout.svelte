@@ -2,7 +2,7 @@
 	<header>
 		logo
 		<div>
-			<a href="/">github</a>
+			<a href="https://github.com/dangelomedinag" target="_blank">github</a>
 		</div>
 	</header>
 	<main>
@@ -33,5 +33,9 @@
 	main {
 		/* background-color: rgba(240, 255, 255, 0.144); */
 		flex: auto;
+	}
+
+	footer {
+		height: 300px;
 	}
 </style>
