@@ -42,7 +42,7 @@
 			? { delay: 100, duration: 1000, easing: quintOut, start: 0.95 }
 			: { duration: 0 }}
 	>
-		<div>
+		<div class="content">
 			<slot />
 		</div>
 		<slot name="actions" />
@@ -88,7 +88,7 @@
 		font-family: 'Montserrat', sans-serif;
 	}
 
-	.card :global(span.highlight) {
+	.content :global(span) {
 		color: #64d0ff;
 	}
 
@@ -98,13 +98,14 @@
 		gap: 1em;
 		margin-top: 1em;
 		text-align: center;
-		font-size: 1em;
+		/* font-size: 1em; */
 		font-family: 'Montserrat', sans-serif;
 	}
 	.card :global([slot='actions'] > *) {
+		line-height: 1em;
 		flex-basis: 100%;
-		/* padding: 0.6em 1.2em; */
-		margin: 0;
+		border-radius: 8px;
+		border: 1px solid transparent;
 		background-color: var(--color-bg-opacity);
 	}
 

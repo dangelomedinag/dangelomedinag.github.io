@@ -4,8 +4,7 @@
 
 <Card title="⚡">
 	<p>
-		My name is <span class="highlight">Dangelo</span>, i am a Junior front-end developer and graphic
-		designer.
+		My name is <span>Dangelo</span>, i am a Junior front-end developer and graphic designer.
 	</p>
 	<p>
 		I have worked as an audiovisual editor and as a graphic designer. Some time ago, self-taught, I

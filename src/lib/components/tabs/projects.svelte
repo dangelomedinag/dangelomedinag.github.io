@@ -12,7 +12,7 @@
 	</p>
 	<div slot="actions">
 		<a href="https://github.com/dangelomedinag/magacine">repository</a>
-		<button>site</button>
+		<a href="https://magacine.vercel.app">site</a>
 	</div>
 </Card>
 <Card title="Climate 🌤️">
@@ -22,7 +22,7 @@
 		<span>html/ css/ javascript, framework, API's, NodeJS</span>
 	</p>
 	<div slot="actions">
-		<button>repository</button>
-		<button>site</button>
+		<a href="https://github.com/dangelomedinag/climate">repository</a>
+		<a href="https://climateapp-weather.netlify.app">site</a>
 	</div>
 </Card>

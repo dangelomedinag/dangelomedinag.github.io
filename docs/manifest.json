@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-9400c708.js",
+    "file": "_app/immutable/start-ef527f99.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -15,7 +15,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "_app/immutable/pages/__layout.svelte-b818d126.js",
+    "file": "_app/immutable/pages/__layout.svelte-538bec33.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -27,7 +27,7 @@
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "_app/immutable/error.svelte-7355c241.js",
+    "file": "_app/immutable/error.svelte-61aeed5a.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -36,7 +36,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "_app/immutable/pages/index.svelte-486d39a2.js",
+    "file": "_app/immutable/pages/index.svelte-1c679b2b.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -44,11 +44,11 @@
       "_index-b3573826.js"
     ],
     "css": [
-      "_app/immutable/assets/index-6699326a.css"
+      "_app/immutable/assets/index-b97647b5.css"
     ]
   },
   "src/routes/loquesea.svelte": {
-    "file": "_app/immutable/pages/loquesea.svelte-b5a69b62.js",
+    "file": "_app/immutable/pages/loquesea.svelte-574adf15.js",
     "src": "src/routes/loquesea.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -57,7 +57,7 @@
     ]
   },
   "src/routes/magacine.svelte": {
-    "file": "_app/immutable/pages/magacine.svelte-9e3cf28f.js",
+    "file": "_app/immutable/pages/magacine.svelte-797aef19.js",
     "src": "src/routes/magacine.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -73,7 +73,7 @@
     "src": "src/routes/__layout.css"
   },
   "src/routes/index.css": {
-    "file": "_app/immutable/assets/index-6699326a.css",
+    "file": "_app/immutable/assets/index-b97647b5.css",
     "src": "src/routes/index.css"
   }
 }
