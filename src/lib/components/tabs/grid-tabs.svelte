@@ -7,6 +7,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 2em;
+		margin-bottom: 3em;
 	}
 
 	@media (min-width: 650px) {

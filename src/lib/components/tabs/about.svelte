@@ -12,7 +12,9 @@
 		started my steps in web development. To this day, I love it and I hope to continue enjoying it
 		and learning.
 	</p>
-	<button>link</button>
+	<div slot="actions">
+		<button>link</button>
+	</div>
 </Card>
 <Card title="❤">
 	<p>Disfruto mucho del <span>Desarrollo web</span> y de las tecnologia que lo rodean.</p>

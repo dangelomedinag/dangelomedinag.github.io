@@ -33,6 +33,8 @@
 		overflow: hidden;
 		max-width: 600px;
 		margin: 0 auto;
+		/* padding-top: 1em; */
+		padding-bottom: 1em;
 	}
 
 	.tabs > * {
@@ -56,5 +58,6 @@
 	.active {
 		color: var(--color-primary);
 		border-color: var(--color-primary);
+		font-weight: bold;
 	}
 </style>

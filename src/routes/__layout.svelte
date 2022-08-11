@@ -36,6 +36,7 @@
 	}
 
 	footer {
+		border-top: 1px solid var(--color-bg-opacity);
 		height: 300px;
 	}
 </style>

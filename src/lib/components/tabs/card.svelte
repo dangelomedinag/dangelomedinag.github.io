@@ -4,7 +4,7 @@
 
 	export let title: string = '';
 
-	let inside = false;
+	let visible = false;
 
 	function intersecting(node: HTMLElement) {
 		let options = {
@@ -12,10 +12,11 @@
 			threshold: 0.3
 		};
 
-		const callback: IntersectionObserverCallback = (entries) => {
+		const callback: IntersectionObserverCallback = (entries, observer) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					inside = true;
+					visible = true;
+					observer.disconnect();
 				}
 			});
 		};
@@ -31,21 +32,29 @@
 	}
 </script>
 
-{#key inside}
+{#key visible}
 	<article
-		style:visibility={!inside ? 'hidden' : 'visible'}
 		use:intersecting
+		class="card"
+		class:visible
 		data-title={title}
-		in:scale={!inside
-			? { duration: 0 }
-			: { delay: 100, duration: 1000, easing: quintOut, start: 0.95 }}
+		in:scale={visible
+			? { delay: 100, duration: 1000, easing: quintOut, start: 0.95 }
+			: { duration: 0 }}
 	>
-		<slot />
+		<div>
+			<slot />
+		</div>
+		<slot name="actions" />
 	</article>
 {/key}
 
 <style>
-	article {
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		visibility: hidden;
 		text-align: left;
 		border-radius: 10px;
 		border: 2px solid var(--color-bg-opacity);
@@ -57,14 +66,15 @@
 			transform 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 	}
 
-	article:hover {
+	.card:hover,
+	.card:focus-within {
 		border-color: var(--color-primary);
-		transform: translate(-4px, -4px);
+		transform: translate(0px, -8px);
 		background-color: rgba(255 255 255 / 1%);
 		box-shadow: 4px 4px 0px var(--color-primary);
 	}
 
-	article::before {
+	.card::before {
 		content: attr(data-title);
 		position: absolute;
 		top: 0;
@@ -75,13 +85,30 @@
 		padding: 0.25em 1em;
 		border: 1px solid var(--color-bg-opacity);
 		border-radius: inherit;
+		font-family: 'Montserrat', sans-serif;
 	}
 
-	article :global(span.highlight) {
+	.card :global(span.highlight) {
 		color: #64d0ff;
 	}
 
-	article > :global(button.link) {
+	.card :global([slot='actions']) {
+		display: inline-flex;
 		width: 100%;
+		gap: 1em;
+		margin-top: 1em;
+		text-align: center;
+		font-size: 1em;
+		font-family: 'Montserrat', sans-serif;
+	}
+	.card :global([slot='actions'] > *) {
+		flex-basis: 100%;
+		/* padding: 0.6em 1.2em; */
+		margin: 0;
+		background-color: var(--color-bg-opacity);
+	}
+
+	.visible {
+		visibility: visible;
 	}
 </style>
