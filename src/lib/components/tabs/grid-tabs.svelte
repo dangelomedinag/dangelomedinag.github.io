@@ -1,3 +1,4 @@
+<slot name="title" />
 <div class="grid">
 	<slot />
 </div>

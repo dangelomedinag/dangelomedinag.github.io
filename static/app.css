@@ -3,8 +3,10 @@
 	--color-front: rgba(255, 255, 255, 0.87);
 	--color-bg-opacity: rgba(255 255 255 / 7%);
 	--color-primary: #646cff;
+	--font-primary: 'Merriweather', serif;
+	--font-secondary: 'Montserrat', sans-serif;
 
-	font-family: 'Merriweather', serif;
+	font-family: var(--font-primary);
 	font-size: 16px;
 	line-height: 32px;
 	font-weight: 400;
@@ -46,7 +48,7 @@ button {
 	padding: 0.6em 1.2em;
 	font-size: 1em;
 	font-weight: normal;
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--font-secondary);
 	background-color: #1a1a1a;
 	cursor: pointer;
 	transition: border-color 0.25s;
@@ -63,9 +65,7 @@ button:focus-visible {
 	:root {
 		--color-bg: #ffffff;
 		--color-front: #213547;
-		/* --color-front-opacity: rgba(255 255 255 / 7%); */
 		--color-bg-opacity: rgba(0 0 0 / 7%);
-		/* background-color: #ffffff; */
 	}
 	a:hover {
 		color: #747bff;
