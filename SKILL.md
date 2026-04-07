@@ -1,17 +1,13 @@
 ---
-name: action-test
-description: show minimal test view button
+name: work-hours-tracker
+description: herramienta para llevar un registro de las horas extras que realizo en el trabajo
 ---
 
-# Prueba Acción 1
+## Archivos
+- `index.html`: El punto de entrada para cargar el script.
+- `index.js`: punto de entrada al script.
 
-Descripción principal
-
-## Files
-- `index.html`: The local entry point that loads the script.
-- `index.js`: entry point script.
-
-## Actions
+## Acciones
 
 #### 1. registrar marca de tiempo
 Cuando el ususario quiera hacer un registro de horas extras completadas, llamar la herramienta `run_js` con los siguientes datos:
