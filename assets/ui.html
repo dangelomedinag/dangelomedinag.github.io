@@ -20,17 +20,14 @@
     </style>
   </head>
   <body>
-    <h3 id="target" class="text-3xl font-bold border border-blue text-white">dalee</h3>
+    <code class="text-white">
+      <pre id="target"></pre>
+    </code>
 
     <script>
+      const el = document.getElementById("target");
       const url = new URL(window.location)
-      const params = url.searchParams.get("data")
-    
-      const button = document.getElementById("target");
-      if (params) {
-        button.textContent = params.toString()
-      }
-      
+      el.textContent = url.toString()
     </script>
   </body>
 </html>
