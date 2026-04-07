@@ -20,15 +20,17 @@
     </style>
   </head>
   <body>
-    <button id="button" class="text-3xl font-bold border border-blue text-white">dalee</button>
+    <h3 id="target" class="text-3xl font-bold border border-blue text-white">dalee</h3>
 
     <script>
-    const KEYs = "COUNT-KEY"
-    localStorage.setItem(KEYs, "0djjdj");
+      const url = new URL(window.location)
+      const params = url.searchParams.get("data")
     
-      const button = document.getElementById("button");
+      const button = document.getElementById("target");
+      if (params) {
+        button.textContent = params.toString()
+      }
       
-      button.textContent = localStorage.getItem(KEYs) ?? "Nop"
     </script>
   </body>
 </html>
