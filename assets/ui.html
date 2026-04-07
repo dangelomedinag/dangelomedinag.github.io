@@ -27,7 +27,9 @@
     <script>
       const el = document.getElementById("target");
       const url = new URL(window.location)
-      el.textContent = url.toString()
+      const data = url.searchParams.get("data")
+      const obj = JSON.parse(data)
+      el.textContent = JSON.stringify(obj, null, 2)
     </script>
   </body>
 </html>
