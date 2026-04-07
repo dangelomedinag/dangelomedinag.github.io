@@ -2,9 +2,10 @@ const KEY_COUNT = Symbol("count")
 
 
 window['ai_edge_gallery_get_result'] = async (dataStr) => {
-  const action = dataStr.action
-  const amount = dataStr.amount
-  const date = dataStr.date
+  const input = JSON.parse(dataStr)
+  const action = input.action
+  const amount = input.amount
+  const date = input.date
 
   try {
     // Points the app directly to your local UI!
