@@ -1,4 +1,5 @@
 const STORAGE_KEY = 'work_tracker_data';
+localStorage.removeItem(STORAGE_KEY)
 function getData() {
   const data = localStorage.getItem(STORAGE_KEY);
   return data ? JSON.parse(data) : [];
