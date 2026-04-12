@@ -15,7 +15,8 @@ window['ai_edge_gallery_get_result'] = async (dataStr) => {
   const amount = input.amount
   const date = input.date
   const allData = getData();
-  allData.push({amount, date, action})
+  //allData.push({amount, date, action})
+  console.log(allData)
   saveData(allData)
 
 
