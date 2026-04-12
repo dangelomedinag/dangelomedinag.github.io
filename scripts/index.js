@@ -1,5 +1,5 @@
-const STORAGE_KEY = 'work_tracker_data';
-localStorage.removeItem(STORAGE_KEY)
+const STORAGE_KEY = 'work_tracker_data1';
+
 function getData() {
   const data = localStorage.getItem(STORAGE_KEY);
   return data ? JSON.parse(data) : [];
@@ -18,7 +18,7 @@ window['ai_edge_gallery_get_result'] = async (dataStr) => {
   const allData = getData();
   //allData.push({amount, date, action})
   console.log(allData)
-  saveData(allData)
+  //saveData(allData)
 
 
   try {
@@ -28,8 +28,7 @@ window['ai_edge_gallery_get_result'] = async (dataStr) => {
     return JSON.stringify({
       webview: {url: fullUrl},
       result: JSON.stringify({
-        action,
-        dataStr
+        action
       })
     });
 
