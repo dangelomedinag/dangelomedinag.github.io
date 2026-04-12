@@ -1,4 +1,12 @@
-const KEY_COUNT = Symbol("count")
+const STORAGE_KEY = 'work_tracker_data';
+function getData() {
+  const data = localStorage.getItem(STORAGE_KEY);
+  return data ? JSON.parse(data) : [];
+}
+
+function saveData(data) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
 
 
 window['ai_edge_gallery_get_result'] = async (dataStr) => {
@@ -6,10 +14,13 @@ window['ai_edge_gallery_get_result'] = async (dataStr) => {
   const action = input.action
   const amount = input.amount
   const date = input.date
+  const allData = getData();
+  saveData(allData.push({amount, date, action}))
+
 
   try {
     // Points the app directly to your local UI!
-    const fullUrl = `ui.html?v=${Date.now()}&data=${JSON.stringify({amount,date, action})}`;
+    const fullUrl = `ui.html?v=${Date.now()}&data=${JSON.stringify(getData())}`;
 
     return JSON.stringify({
       webview: {url: fullUrl},
