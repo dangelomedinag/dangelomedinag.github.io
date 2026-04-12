@@ -16,9 +16,9 @@ window['ai_edge_gallery_get_result'] = async (dataStr) => {
   const amount = input.amount
   const date = input.date
   const allData = getData();
-  allData.push({amount, date, action})
+  //allData.push({amount, date, action})
   console.log(allData)
-  saveData(allData)
+  saveData([...allData, {amount, date, action}])
 
 
   try {
@@ -27,9 +27,7 @@ window['ai_edge_gallery_get_result'] = async (dataStr) => {
 
     return JSON.stringify({
       webview: {url: fullUrl},
-      result: JSON.stringify({
-        action
-      })
+      result: JSON.stringify(allData)
     });
 
   } catch (e) {
